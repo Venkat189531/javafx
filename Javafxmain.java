@@ -1,4 +1,4 @@
-
+import java.util.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -7,8 +7,6 @@ import javafx.scene.input.Dragboard;
 import javafx.scene.control.cell.TextFieldTableCell;
 import java.io.FileReader;
 import java.io.IOException;
-
-
 import java.util.stream.Collectors;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
@@ -27,7 +25,6 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import org.json.JSONObject;
 import org.json.JSONArray;
 import javafx.scene.control.*;
@@ -47,7 +44,6 @@ import java.util.*;
 import javafx.scene.Node;
 import java.io.FileOutputStream;
 import java.io.File;
-
 import javafx.scene.layout.Priority;
 import javafx.geometry.*;
 import javafx.beans.property.SimpleStringProperty;
@@ -61,10 +57,22 @@ import javafx.scene.control.TableColumn;
 
 
 public class DatabaseJavaFX1Version41 extends Application {
-    final String apiKey = "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";
+    //to scan the user with camera
+    try {  
+            ProcessBuilder pb = new ProcessBuilder("python", "Athentication.py");
+            pb.inheritIO();  
+            Process process = pb.start();
+            process.waitFor();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    
+    final String apiKey = "apiKey";
     String url ;
     String user = "root";
-    String password = "214319";
+    String password = "yourPassword";
     private VBox dynamicFormArea; 
     private TableView<ObservableList<Object>> tableView1;
     private String currentDisplayedTableName;
