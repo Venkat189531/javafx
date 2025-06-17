@@ -1,3 +1,15 @@
+
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.scene.control.cell.CheckBoxTableCell;
+import javafx.collections.ObservableList;
+import javafx.collections.FXCollections;
+import javafx.scene.control.TableColumn;
+import java.util.stream.Collectors;
+import javafx.application.Platform;
+import javafx.beans.property.SimpleStringProperty;
 import java.util.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -7,9 +19,7 @@ import javafx.scene.input.Dragboard;
 import javafx.scene.control.cell.TextFieldTableCell;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.stream.Collectors;
-import javafx.application.Platform;
-import javafx.beans.property.SimpleStringProperty;
+import javafx.geometry.*;
 import javafx.collections.*;
 import javafx.scene.control.*;
 import java.net.URL;
@@ -45,18 +55,10 @@ import javafx.scene.Node;
 import java.io.FileOutputStream;
 import java.io.File;
 import javafx.scene.layout.Priority;
-import javafx.geometry.*;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.scene.control.cell.CheckBoxTableCell;
-import javafx.collections.ObservableList;
-import javafx.collections.FXCollections;
-import javafx.scene.control.TableColumn;
 
 
-public class DatabaseJavaFX1Version41 extends Application {
+
+public class JavaFX1 extends Application {
     //to scan the user with camera
     try {  
             ProcessBuilder pb = new ProcessBuilder("python", "Athentication.py");
